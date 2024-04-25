@@ -13,6 +13,9 @@ Contained within this file are comprehensive details regarding event generation 
 # ML_fatjetimages_delphes.cpp
 Enclosed herein is the expert mode C++ code of Madanalysis5, meticulously tailored for analysis purposes, facilitating the extraction of essential information and variables required for generating .csv files. These files serve as crucial inputs for crafting jet images indispensable for classification tasks.
 
+# pysaf.py
+This Python file serves as a versatile tool for plotting the distributions extracted from the final .SAF output of Madanalysis5.
+
 # pre_processing.ipynb
 This Jupyter notebook is crafted for preprocessing .csv data, crafting jet images, and orchestrating the entire pipeline of training and deploying a convolutional neural network (CNN) model for image classification. It seamlessly integrates data preprocessing, model training, evaluation, and performance analysis, offering insights into CNN outputs and performance metrics crucial for classification tasks.
 
