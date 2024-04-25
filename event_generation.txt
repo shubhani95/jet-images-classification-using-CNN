@@ -1,0 +1,32 @@
+
+--- EVENT GENERATION ---
+
+Perform as usual with MG5/Madspin/Pythia8 to produce a hepmc file.
+
+1. For generating signal events (gg > H > hh > bb~bb~) :
+   >Import 2HDMtII_nlo model
+   >generate gg > h2 > h1 h1  and output directory to store cards and other files.
+   >Edit param_card.dat for masses and set Decay widths for 25 and 35 to Auto.
+   >Edit run_card.dat to change the number of events.
+   >Edit pythia8_card.dat to switch off mpi (for now!) and keep ISR/FSR switched on.
+   >Edit madspin_card.dat to set spinmode to none and to specify decay chain  h1 > bb~.
+
+2. For generating QCD four b background events (pp > bb~bb~) :
+   >generate pp > bb~bb~ and output directory to store cards and other files.
+   >Edit run_card.dat to change the number of events and to put Parton level p_t cut on b of 100 GeV.
+   >Edit pythia8_card.dat to switch off mpi (for now!) and keep ISR/FSR switched on.
+   
+3. For generating Zbb background events (pp > Zbb~ , Z > bb~) :
+   >generate pp > Zbb~ and output directory to store cards and other files.
+   >Edit run_card.dat to change the number of events and to put Parton level p_t cut on Z (pdg code = 23) of 250 GeV and 200 GeV cut on b.
+   >Edit pythia8_card.dat to switch off mpi (for now!) and keep ISR/FSR switched on.
+   >Edit madspin_card.dat to set spinmode to none and to specify decay chain  z > bb~ (z should be in small letter otherwise Madspin gives error).
+
+4.For generating ttbar background events (pp > tt~ , ( t > W+ b , W+ > j j ),( t~ > W- b~ , W- > all all )):
+   >define multi particle j = u d c s b u~ d~ c~ s~ b~
+   >generate pp > tt~ and output directory to store cards and other files.
+   >Edit run_card.dat to change the number of events and to put Parton level p_t cut on t (pdg code = 6) of 250 GeV.
+   >Edit pythia8_card.dat to switch off mpi (for now!) and keep ISR/FSR switched on.
+   >Edit madspin_card.dat to set spinmode to none and to specify decay chain ( t > W+ b , W+ > j j ),( t~ > W- b~ , W- > all all )).
+
+
